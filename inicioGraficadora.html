@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <!--<link rel="stylesheet" href="style.css">-->
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@400;600&display=swap');
+
+        * {
+      padding: 0;
+      margin: 0;
+     text-decoration: none;
+     list-style: none;
+     box-sizing: border-box;
+     }
+
+     body {
+     font-family: 'Open Sans';
+     min-height: 80px;
+     background-color: lightcyan;
+     }
+
+     header{
+        background: linear-gradient(
+            90deg,
+            rgb(133, 197, 240)0%,
+            rgb(58, 29, 221)70%
+        );
+      text-align: center;
+      padding: 25px 0;
+      min-height: 80px;
+      }
+
+      nav a{
+      display: inline-block;
+      font-family: Epilogue;
+      font-size: 18px;
+       padding: 20px;
+       font-weight: bold;
+       text-decoration: none;
+       color: #fff;
+       margin: 0 30px;
+       border-radius: 30px;
+        }    
+
+     nav a:hover{
+       background-color: #000;
+       color: #fff;
+       padding: 10px;
+     }
+
+     .funciones{
+    display: flex;
+    justify-content: center;
+    }
+
+    h1{
+        font-family: Epilogue;
+        font-size: 50px;
+        padding: 20px;
+        color: #5386c9;
+        opacity: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    p{
+        font-family: Open Sans;
+        font-size: 30px;
+        padding: 20px;
+        color: #000000;
+        opacity: none;
+        display: flex;
+        justify-content: center;
+    }
+
+     .boton{
+      display: block;
+      width: 120px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      background-color: rgb(86, 174, 214);
+      border-radius: 10px;
+     padding: 15px 30px;
+      margin: 110px 180px;
+      color: rgb(8, 8, 8);
+      text-decoration: none;
+     }
+
+     .boton{
+     display: flex;
+     justify-content: center;
+     }
+
+     .boton a{
+     color: #000;
+    }
+
+     .boton:hover {
+      background-color: rgb(170, 236, 238);
+      border: 2px solid rgb(33, 141, 241);
+      color: rgb(0, 0, 0);
+     }
+
+     .geometria {
+       font-size: 25px;
+       font-family: DM Serif Text;
+       color: white;
+       font-weight: bold;
+        }
+
+     .menu {
+      position: absolute;   /*absolute*/
+       top: 10px;
+        left: 0%;
+        right: 0%;
+       display: flex;
+       align-items: center;
+      justify-content: space-between;
+     }
+
+     #menu {
+      display: none;
+       }
+
+     .menu-icono {
+      width: 25px;
+        }
+
+        .menu label {
+      cursor: pointer ;
+      display: none;
+        }
+
+     /*responsive*/
+
+        @media(max-width:991px) {
+
+        .menu {
+        top: 0%;
+        padding: 20px;
+     }
+
+     .menu label {
+        display: initial;
+     }
+
+     .menu .navbar {
+        position: absolute; /*absolute*/
+        top: 100%;
+        left: 0%;
+        right: 0%;
+        background: linear-gradient(
+            90deg,
+            rgb(133, 197, 240)0%,
+            rgb(58, 29, 221)70%
+        );
+        display: none;
+        }
+
+        nav a{
+        display: inline-block;
+        font-family: Open Sans;
+        font-weight: bold;
+        font-size: 22px;
+        text-decoration: none;
+        color: #fff;
+        margin: 0 30px;
+        padding: 5px 15px;
+        border-radius: 30px;
+        }
+
+     nav a:hover{
+        background-color: #000000;
+        color: #fff;
+    
+        }
+
+     .menu .navbar nav a{
+        width: 100%;
+     }
+
+     #menu:checked ~ .navbar {
+        display: initial;
+        }
+
+        .encabezado-imagenes {
+        width: 100%;
+        height: auto;
+     }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu container">
+            <a href="index.html" class="geometria">GeoUni</a>
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="Imagenes/menu.png" class="menu-icono" alt="">
+            </label>
+        <div class="navbar">
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="Definiciones.html">Definiciones</a>
+                <a href="inicioGraficadora.html">Graficadora</a>
+                <a href="Calculadora.html">Calculadora</a>
+            </nav>
+        </div>
+    </header>
+
+    </div>
+
+    <h1>Graficadora</h1>
+    <p>Con esta graficadora nuestro objetivo es que sea de gran utilidad
+         para los estudiantes de ingeniería con materias relacionadas a 
+         cálculo y análisis de funciones. ¿Como funciona? Las funciones se grafican 
+         uniendo puntos, obtenidos de evaluar la expresión para diferentes valores de x</p>
+    
+<div class="funciones">
+
+    <img src="Imagenes/funciones.jpg" alt="Definiciones de funciones">
+ 
+ </div>
+
+ <div class="boton container">
+
+    <a href="graficadora.html" target="_blank">Graficar</a>
+
+</body>
+</html>

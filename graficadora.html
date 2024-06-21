@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Graficadora</title>
+    <style type="text/css">
+      html {
+        background: linear-gradient(
+        90deg,
+        rgb(133, 197, 240)0%,
+        rgb(58, 29, 221)70%
+        );
+      }
+      
+      header{
+        border-style:solid;
+        border-width:1%;
+        border-radius: 10px 10px 0px 0px;
+        background-color: aliceblue;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align:center;
+        width: 80%;
+        margin: 0px auto 0px auto;
+        font-family: 'Geneva', sans-serif;
+        color: midnightblue;
+        font-size: 2 rem;
+      }
+
+
+
+      body {
+        font-family: sans-serif;
+        margin: 0 auto;
+        padding: 0;
+      }
+      canvas {
+        outline: 1px solid lightgray;
+        margin: 10px auto;
+        background-color: #fafafa;
+        display: block;
+      }
+      input {
+        border: 1px dotted gray;
+        outline: 0;
+        padding: 5px;
+        background-color: #fafafa;
+        color: #222;
+        margin-bottom: 5px;
+      }
+      input:focus {
+        border-style: solid;
+      }
+      input[type='color'] {
+        height: 28px;
+      }
+
+      input[name='formula'] {
+        width: calc(100% - 160px);
+        box-sizing: border-box;
+      }
+      input[name='color'] {
+        width: 75px;
+        box-sizing: border-box;
+        margin: 0;
+        margin-left: 5px;
+      }
+      input[name='agregar'] {
+        width: 75px;
+        box-sizing: border-box;
+        margin: 0;
+        margin-left: 5px;
+      }
+      input[name='escala-range'] {
+        float: left;
+      }
+      input[name='escala-number'] {
+        width: 45px;
+      }
+
+      .error {
+        border-color: red;
+      }
+
+      #contenedor {
+        max-width: 600px;
+      }
+
+      @media (max-width: 600px) {
+        input[name='formula'] {
+          width: 100%;
+        }
+        #contenedor {
+          max-width: 400px;
+        }
+      }
+      @media (max-width: 400px) {
+        #contenedor {
+          max-width: 300px;
+        }
+      }
+      @media (max-width: 300px) {
+        #contenedor {
+          max-width: 200px;
+        }
+      }
+
+      ol {
+        padding-left: 0;
+      }
+      li {
+        list-style: none;
+        padding: 3px;
+      }
+      li:nth-child(odd) {
+        background-color: #e2e2e2;
+      }
+    </style>
+
+  </head>
+
+  <header>
+    <div class="menu container">
+      <h1>Geometria Analitica</h1>
+      Graficar
+  </div>
+  </header>
+  <body>
+    <canvas width="100" height="200"
+      ></canvas
+    >
+    <form style="margin: 0 auto;" autocomplete="off">
+      <input name="formula" value="" type="text" /><!--
+	 --><input
+        name="color"
+        type="color"
+        value="#BC8D6B"
+        title="Click derecho para cambiar a un color aleatorio."
+      /><!--
+	 --><input name="agregar" value="Agregar" type="submit" />
+    </form>
+    <div id="contenedor" style="margin: 0 auto;">
+      <ol id="funciones"></ol>
+      <label for="escala-input">Escala:</label><br />
+      <input
+        id="escala-input"
+        type="range"
+        min="1"
+        max="200"
+        value="20"
+        name="escala-range"
+        title="Escala"
+      />
+      <input
+        type="number"
+        name="escala-number"
+        min="1"
+        value="20"
+        title="Escala"
+      />
+    </div>
+    <script src="expresiones.js"></script>
+    <script src="graficadora.js"></script>
+  </body>
+</html>
